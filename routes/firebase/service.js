@@ -1,14 +1,11 @@
-import express from 'express';
-import database from './routes/config.js';
+const express = require('express');
+const router = express.Router();
 
-const app = express();
-const port = 3000;
+// config.js에서 export한 모듈을 다음과 같이 import 시킬 수 있다. (같은 디렉토리 위치)
+const database = require('./config');
 
-app.get('/', (req, res) => {
-  res.send({ a: '1123' });
-  console.log('get 요청 들어옴');
-
-  //Firebase 연동
+// localhost:3000/firebase/save 호출
+router.get('/save', function (req, res) {
   database
     .ref('cosmetics')
     .doc('11')
@@ -29,6 +26,4 @@ app.get('/', (req, res) => {
   return res.json({ firebase: true });
 });
 
-app.listen(port, () => {
-  console.log(`서버가 실행됩니다. http://localhost:${port}`);
-});
+module.exports = router;
