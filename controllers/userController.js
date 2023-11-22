@@ -15,7 +15,7 @@ const addUser = async (req, res, next) => {
     //   .then(console.log('성공'))
     //   .catch(console.log('실패'));
 
-    const user = await firestore.collection('cosmetics').doc('22').set(data);
+    const user = await firestore.collection('users').doc().set(data);
 
     console.log('완료!', user);
 
