@@ -17,6 +17,15 @@ const addUser = async (req, res, next) => {
 
     const user = await firestore.collection('users').doc().set(data);
 
+    const dd = await firestore
+      .collection('cosmetics')
+      .get()
+      .then((결과) => {
+        결과.forEach((doc) => {
+          console.log('결과 :', doc.data());
+        });
+      });
+
     console.log('완료!', user);
 
     res.send('Record saved successfully');
