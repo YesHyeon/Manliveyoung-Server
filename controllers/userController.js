@@ -5,18 +5,20 @@ const firestore = firebase.firestore();
 
 const addUser = async (req, res, next) => {
   try {
-    console.log('들어옴');
     const data = req.body;
 
-    console.log('Data : ', data);
+    console.log('유저 회원가입 데이터 : ', data);
 
-    const createUser = await firebase
-      .auth()
-      .signInEmailAndPassword(data.id, data.password)
-      .then(console.log('성공'))
-      .catch(console.log('실패'));
+    // const createUser = await firebase
+    //   .auth()
+    //   .signInEmailAndPassword(data.id, data.password)
+    //   .then(console.log('성공'))
+    //   .catch(console.log('실패'));
 
-    const user = await firestore.collection('cosmetics').doc('11').set(data);
+    const user = await firestore.collection('cosmetics').doc('22').set(data);
+
+    console.log('완료!', user);
+
     res.send('Record saved successfully');
   } catch (error) {
     res.status(400).send(error.message);
