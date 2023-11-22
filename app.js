@@ -8,6 +8,10 @@ app.get('/', (req, res) => {
   res.send({ a: '1123' });
   console.log('get 요청 들어옴');
 
+  var ref = database.ref('건성cosmetics');
+  var doc = ref.get();
+  print('doc :', doc);
+
   //Firebase 연동
   database
     .ref('cosmetics')
