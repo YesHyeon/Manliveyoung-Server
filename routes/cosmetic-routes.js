@@ -3,7 +3,7 @@ const { addCosmetic } = require('../controllers/cosmeticController');
 
 const router = express.Router();
 
-router.post('/건성cosmetic', addCosmetic);
+router.get('/cosmetic', addCosmetic);
 
 module.exports = {
   routes: router,

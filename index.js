@@ -14,6 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/api', userRoutes.routes);
+app.use('/cosmeticapi', cosmeticRoutes.routes);
 
 // app.use('/api2', cosmeticRoutes.routes);
 
