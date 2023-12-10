@@ -4,7 +4,7 @@ const Cosmetic = require('../models/cosmetic');
 const firestore = firebase.firestore();
 
 const addCosmetic = async (req, res, next) => {
-  const type = '건성';
+  const type = req.body['type'];
   const engcategory = [
     'skin',
     'lotion',

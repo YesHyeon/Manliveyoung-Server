@@ -3,7 +3,7 @@ const { addCosmetic } = require('../controllers/cosmeticController');
 
 const router = express.Router();
 
-router.get('/cosmetic', addCosmetic);
+router.post('/cosmetic', addCosmetic);
 
 module.exports = {
   routes: router,
