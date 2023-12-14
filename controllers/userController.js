@@ -7,17 +7,11 @@ const addUser = async (req, res, next) => {
   try {
     const data = req.body;
 
-    console.log('유저 회원가입 데이터 : ', data);
-
-    // const createUser = await firebase
-    //   .auth()
-    //   .signInEmailAndPassword(data.id, data.password)
-    //   .then(console.log('성공'))
-    //   .catch(console.log('실패'));
+    console.log('회원가입 유저의 정보 : ', data);
 
     const user = await firestore.collection('users').doc().set(data);
 
-    const dd = await firestore
+    const result = await firestore
       .collection('cosmetics')
       .get()
       .then((결과) => {
@@ -26,7 +20,7 @@ const addUser = async (req, res, next) => {
         });
       });
 
-    console.log('완료!', user);
+    console.log('회원가입이 완료되었습니다', user);
 
     res.send('Record saved successfully');
   } catch (error) {
