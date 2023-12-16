@@ -58,7 +58,7 @@ Flutter를 이용해 개발한 남자화장품 추천 앱입니다.
 https://github.com/YesHyeon/flutter-hwahae-app/assets/81014501/73d64286-c742-42be-837b-1ddccd0d6357
 
 # 서버 실행방법
-1. node 설치[https://nodejs.org/ko/
+1. node 설치 https://nodejs.org/ko/
 2. .env 파일 루트 폴더에 다운로드
 3. 터미널 입력
 
