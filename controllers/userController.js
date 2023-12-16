@@ -7,8 +7,6 @@ const addUser = async (req, res, next) => {
   try {
     const data = req.body;
 
-    console.log('회원가입 유저의 정보 : ', data);
-
     const user = await firestore.collection('users').doc().set(data);
 
     const result = await firestore
@@ -22,7 +20,7 @@ const addUser = async (req, res, next) => {
 
     console.log('회원가입이 완료되었습니다', user);
 
-    res.send('Record saved successfully');
+    res.status(200).send('Record saved successfully');
   } catch (error) {
     res.status(400).send(error.message);
   }
