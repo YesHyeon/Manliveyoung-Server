@@ -20,14 +20,6 @@ Flutter를 이용해 개발한 남자화장품 추천 앱입니다.
 - Node.js
 - Firebase Firestore
 
-# 데이터 수집 및 분석 📉
-<img width="550" alt="image" src="https://github.com/YesHyeon/flutter-hwahae-app/assets/81014501/fa2597b4-f19d-4938-af1b-593fdae3fac6">
-
-앱 내 더미데이터 활용 목적 수집 (name, category, review, user_type)
-
-화장품 수 : 카테고리별 10개. 총 60개. / 화장품당 리뷰 수 : 100개 / 총 데이터셋 size : 6000개
-
-
 
 # Firebase 구축 🎇
 
