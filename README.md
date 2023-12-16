@@ -55,6 +55,7 @@ https://github.com/YesHyeon/flutter-hwahae-app/assets/81014501/73d64286-c742-42b
 3. 터미널 입력창에 아래와 같이 입력하기
 
 ```
-$ node Manliveyoung-Server/index.js"
+$ cd 폴더위치
+$ node index.js"
 ```
 
