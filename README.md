@@ -51,8 +51,8 @@ https://github.com/YesHyeon/flutter-hwahae-app/assets/81014501/73d64286-c742-42b
 
 # 서버 실행방법
 1. node 설치 https://nodejs.org/ko/
-2. .env 파일 루트 폴더에 다운로드
-3. 터미널 입력
+2. '기타/서버 env 파일' 폴더에 있는 env 파일을 서버 루트 폴더에 옮기기 (이름은 .env로 변경)
+3. 터미널 입력창에 아래와 같이 입력하기
 
 ```
 node Manliveyoung-Server/index.js"
